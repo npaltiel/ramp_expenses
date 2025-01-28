@@ -14,6 +14,7 @@ def get_access_token():
         authority=f"https://login.microsoftonline.com/{TENANT_ID}"
     )
     token_response = app.acquire_token_for_client(scopes=SCOPES)
+    print(token_response["access_token"])
     if "access_token" in token_response:
         return token_response["access_token"]
     else:
@@ -40,5 +41,5 @@ def send_email(sender_email, to_email, subject, body):
 
 
 # Example usage
-send_email("fishel@anchorhc.org", "nochum.paltiel@anchorhc.org", "Subject",
+send_email("nochum.paltiel@anchorhc.org", "nochum.paltiel@anchorhc.org", "Subject",
            "This is a test email sent via Microsoft Graph API.")

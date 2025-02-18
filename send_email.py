@@ -39,7 +39,6 @@ def send_email(sender_email, to_email, subject, body):
     else:
         print(f"Failed to send email: {response.status_code}, {response.json()}")
 
-
 # Example usage
-send_email("nochum.paltiel@anchorhc.org", "nochum.paltiel@anchorhc.org", "Subject",
-           "This is a test email sent via Microsoft Graph API.")
+# send_email("nochum.paltiel@anchorhc.org", "nochum.paltiel@anchorhc.org", "Subject",
+#            "This is a test email sent via Microsoft Graph API.")
